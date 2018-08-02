@@ -1,0 +1,14 @@
+.:53 {
+        debug
+        errors
+        whoami
+        log stdout
+        etcd com {
+		stubzones
+                path /ulfsaar
+		except /tmp
+                endpoint http://10.100.192.51:2379
+		upstream /etc/resolv.conf
+                fallthrough
+        }
+}
